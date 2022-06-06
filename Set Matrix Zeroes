@@ -1,0 +1,32 @@
+ def setZeroes(self, matrix):
+        """
+        :type matrix: List[List[int]]
+        :rtype: None Do not return anything, modify matrix in-place instead.
+        """
+        vertical = [0] * len(matrix)
+        horizontal = [0] * len(matrix[0])
+        
+        for i in range(len(matrix)):
+            for j in range(len(matrix[0])):
+                if matrix[i][j] == 0:
+                    vertical[i] = 1
+                    horizontal[j] = 1
+                    print
+                else:
+                    continue
+                            
+        for i in range(len(vertical)):
+            if vertical[i] == 1:
+                for j in range(len(matrix[0])):
+                    matrix[i][j] = 0
+                    
+            else:
+                continue
+                
+        for i in range(len(horizontal)):
+            if horizontal[i] == 1:
+                for j in range(len(matrix)):
+                    matrix[j][i] = 0
+                    
+            else:
+                continue
